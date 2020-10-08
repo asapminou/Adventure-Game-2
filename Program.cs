@@ -1,4 +1,4 @@
-// Copyright (C) 2020 Mainul Iftekher, All Rights Reserved
+﻿// Copyright (C) 2020 Mainul Iftekher, All Rights Reserved
 using System;
 
 namespace AdventureGame
@@ -167,4 +167,4 @@ namespace AdventureGame
 
 
 
-}adventure
+}
