@@ -33,7 +33,8 @@ namespace AdventureGame
             string answer = GetPlayerAction();
             HandleAction (answer);
             // update player state based on their actions
-            UpdatePlayerLocation();
+            if (UpdatePlayerLocation(out locX, out locY, answer))
+                Console.WriteLine("you moved");
 
             // go back to display location
                 //  
@@ -107,9 +108,36 @@ namespace AdventureGame
 
             return answer;
         } 
-        static void UpdatePlayerLocation()
+        static bool UpdatePlayerLocation(out int x, out int y, string action)
         {
            // not sure how this will work yet 
+            bool didChange = false;
+           // get player location
+            int currentX = x;
+            int currentY = y;
+            
+            x = currentX;
+            y = currentY;
+           // current action if its to move
+
+           if (action == "move")
+           {
+            if (CanMove())
+            {
+                y++;
+            }
+
+           }
+           // change the current location to the next location
+
+           // return new location
+           return didChange;
+          
+        }
+        static bool CanMove()
+        {
+
+            return true;
         }
         static void HandleAction(string answer)
             {
