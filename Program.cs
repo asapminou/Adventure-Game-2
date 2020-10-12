@@ -125,11 +125,6 @@ namespace AdventureGame
                             
                             Console.WriteLine(i);
                             
-                        
-                            
-                           
-                            
-
                             switch (answer)
                             {
                                 case "a":
@@ -156,6 +151,7 @@ namespace AdventureGame
                                     Console.WriteLine ("invalid input");
                                     break;
                                 }
+
                             }
                         }
                         
