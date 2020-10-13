@@ -125,7 +125,7 @@ namespace AdventureGame
            {
             if (CanMove())
             {
-                y++
+                y++;
             }
 
            }
