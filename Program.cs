@@ -16,9 +16,10 @@ namespace AdventureGame
             WelcomePlayer();
 
             // initilize the game map
-            string [,] gameMap = new string [5,5];
-            gameMap = InitMap();
+            Map theMap = new Map (5);
+            theMap.Init();
             
+        
             // set the initial player location
             int locX = 0;
             int locY = 0;
@@ -124,7 +125,7 @@ namespace AdventureGame
            {
             if (CanMove())
             {
-                y++;
+                y++
             }
 
            }
