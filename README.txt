@@ -1,4 +1,4 @@
-https://github.com/asapminou/Adventure-Game.git
+https://github.com/asapminou/Adventure-Game-2.git
 
 All changes are subject to change in the program.
 Learning Navigation as well as testing what works and what doesn't

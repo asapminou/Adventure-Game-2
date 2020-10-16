@@ -27,7 +27,9 @@ namespace AdventureGame
             
         
             // display location
-            DisplayLocation (locX, locY, gameMap);
+            Location loc = theMap.LocationAt(locX, locY);
+            Console.WriteLine(loc.Desc());
+
 
             
             // prompt player for actions
@@ -114,11 +116,11 @@ namespace AdventureGame
            // not sure how this will work yet 
             bool didChange = false;
            // get player location
-            int currentX = x;
-            int currentY = y;
+            // int currentX = x;
+            // int currentY = y;
             
-            x = currentX;
-            y = currentY;
+            x = 0;
+            y = 0;
            // current action if its to move
 
            if (action == "move")

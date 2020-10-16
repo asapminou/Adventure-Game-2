@@ -22,13 +22,14 @@ namespace AdventureGame
             CanGoDown = true;
             CanGoLeft = true;
             CanGoRight = true;
-        }   
+        } 
 
+        public string Desc() {return _description;}
         public void SetDirections(bool up, bool down, bool left, bool right)
         {
             CanGoUp = up;
             CanGoDown = down;
-            CanGoDown = left;
+            CanGoLeft = left;
             CanGoRight = right;
         }
         
