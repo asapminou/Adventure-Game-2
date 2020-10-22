@@ -1,59 +1,63 @@
-
+// Copyright (C) 2020 Mainul Iftekher, All Rights Reserved
 using System;
 
 namespace AdventureGame
 {
-
-    class Map
-
+    public class Map
     {
-        private Location [,] _gameMap;
+        public Location[,] _locations;
         
-        public Map (int mapSize)
+        public Map()
         {
-
-            _gameMap = new Location[mapSize,mapSize];
+            Init();
         }
 
-        public void Init()
+        void Init()
         {
-            // add new locations to the map
-            _gameMap[0,0] = new Location("Living Room \n \n You see a woman sitting on the ground playing with a baby while paw patrol is on the tv.");
-            _gameMap[0,0].SetDirections (true, true, true, true);
+            _locations = new Location[,] 
+            {
+                {
+                    new Location("lighthouse", "The lighthouse is empty but has an eerie feeling to it. A bright light shines and you disappear \n up \n down \n left \n right"),
+                    new Location("street2", ""), // empty location
+                    null,
+                    new Location("kitchen", "You see a man making breakfast, there's also a dog. It looks like he's waitng for his food.\n up \n down \n left \n right"),
+                    null
+                },
+                {
+                    new Location ("beach", "The beach is filled with people playing volleyball, swimming in the water and tanning.\n up \n down \n left \n right"),
+                    new Location ("street", "The street is parked with expensive cars and boats.\n up \n down \n left \n right"),
+                    new Location ("front lawn", "The front lawn is all open space, realize that this is a beach house.\n up \n down \n left \n right"),
+                    new Location ("living room", "You see a woman sitting on the ground playing with a baby while paw patrol is on the tv.\n up \n down \n left \n right"),
+                    new Location ("backyard", "You walk out and walk to a huge backyard. There's swings and a slide and there are kids playing on it\n up \n down \n left \n right"),
+                },
+                {
+                    null,
+                    new Location("park", "The park has a playground, an open field, a basketball and tennis court.\n up \n down \n left \n right"),
+                    null,
+                    new Location("basement", "You go downstairs and see a theatre room and a home gym."),
+                    new Location("dog house", "The dog house has some toys, a water bowl and dog food. Another dog tells you to try to find the light house.\n up \n down \n left \n right")
+                }
+            };
 
-            _gameMap[0,1] = new Location("Kitchen \n \n You see a man making breakfast, there's also a dog. It looks like he's waitng for his food");
-            _gameMap[0,1].SetDirections (false, false, false, true);
-
-            _gameMap[0,2] = new Location("Basement \n \n You go downstairs and see a theatre room and a home gym. ");
-            _gameMap[0,2].SetDirections (false, true, true, false);
-
-            _gameMap[0,3] = new Location("Backyard \n \n You walk out and walk to a huge backyard. There's swings and a slide and there are kids playing on it.");
-            _gameMap[0,3].SetDirections (true, false, false, true);
-
-            _gameMap[0,4] = new Location("Doghouse \n \n The dog house has some toys, a water bowl and dog food.");
-            _gameMap[0,4].SetDirections (false, true, true, false);
-
-            _gameMap[1,0] = new Location("Front Lawn \n \n The front lawn is all open space, realize that this is a beach house.");
-            _gameMap[1,0].SetDirections (true, true, false, false);
-
-            _gameMap[1,1] = new Location("Street \n \n The street is parked with expensive cars and boats.");
-            _gameMap[1,1].SetDirections (true, true, true, true);
-
-            _gameMap[1,2] = new Location("Park \n \n The park has a playground, an open field, a basketball and tennis court");
-            _gameMap[1,2].SetDirections (false, false, true, false);
-
-            _gameMap[1,3] = new Location("Beach \n \n The beach is filled with people playing volleyball, swimming in the water and tanning.");
-            _gameMap[1,3].SetDirections (false, true, true, false);
-
-            _gameMap[1,4] = new Location("Lighthouse \n \n The lighthouse is empty but has an eerie feeling to it.");
-            _gameMap[1,4].SetDirections (false, true, false, true);
-        }
-        public Location LocationAt (int i, int j)
-        {
-            return _gameMap[i,j];
         }
 
-       
+        public Location LocationAt(int i, int j)
+        {
+            if(IsLocation(i, j)) return _locations[i,j];
+            else return null;
+        }
+
+        public bool IsLocation(int i, int j)
+        {
+            //return nothing if i & j is out of bounds
+            //if((i < 0) && (j < 0) && ...) return null
+            if(i < 0) return false;
+            else if(j < 0) return false;
+            else if(i >= _locations.GetLength(0)) return false;
+            else if(j >= _locations.GetLength(1)) return false;
+            else if(_locations[i,j] == null) return false;
+            else return true;
+        }
     }
 }
 

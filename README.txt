@@ -1,10 +1,14 @@
 https://github.com/asapminou/Adventure-Game-2.git
+Date October 21st
 
-All changes are subject to change in the program.
-Learning Navigation as well as testing what works and what doesn't
-Also setting up Class for cat (player)
-As well as stats
-Prompts are not working properly
-infinite loop not sure how to stop it
+Navigation finally works
+The goal is to get to the final destination
+Directions are up, down, left, right
+
+I wanted to add items to collect throughout the map 
+and you would need those items in order to complete the game
+but I was not sure how to add it just yet.
+
+
 
 
