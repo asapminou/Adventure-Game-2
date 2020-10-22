@@ -13,7 +13,7 @@ I wanted to add items to collect throughout the map
 and you would need those items in order to complete the game
 but I was not sure how to add it just yet. 
 
-CompleteGame Branch is A3
+Completegame Branch is A3
 
 
 
