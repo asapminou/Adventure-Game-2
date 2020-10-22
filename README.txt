@@ -7,7 +7,7 @@ Directions are up, down, left, right
 
 I wanted to add items to collect throughout the map 
 and you would need those items in order to complete the game
-but I was not sure how to add it just yet.
+but I was not sure how to add it just yet. 
 
 
 
