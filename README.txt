@@ -1,6 +1,7 @@
 https://github.com/asapminou/Adventure-Game-2.git
 Date October 21st
-Mainul Iftekher
+Mainul Iftekher 
+gd60mainul
 
 Navigation finally works
 The goal is to get to the final destination
