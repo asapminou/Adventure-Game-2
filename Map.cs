@@ -17,7 +17,7 @@ namespace AdventureGame
             _locations = new Location[,] 
             {
                 {
-                    new Location("lighthouse", "The lighthouse is empty but has an eerie feeling to it. A bright light shines and you disappear \n up \n down \n left \n right"),
+                    new Location("lighthouse", "The lighthouse is empty but has an eerie feeling to it. A bright light shines and you disappear."),
                     new Location("street2", ""), // empty location
                     null,
                     new Location("kitchen", "You see a man making breakfast, there's also a dog. It looks like he's waitng for his food.\n up \n down \n left \n right"),
